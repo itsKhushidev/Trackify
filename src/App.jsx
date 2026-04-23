@@ -1,121 +1,270 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+//import "./index.css";
+
+import { useState } from "react";
+import "./App.css";
+
+import Card from "./Card";
+import Navbar from "./Navbar";
+import Hero from "./Hero";
+import Feature from "./feature";
+import Benefits from "./Benefits";
+import Testimonials from "./Testimonials";
+import CTA from "./CTA";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  //let counter = 0;
+  let [counter,KCounter] = useState(0);
+
+
+  const setCounter = () => {
+    
+    KCounter(counter+1);
+    //console.log(counter);
+  };
+    const setDCounter = () => {
+    
+    KCounter(counter-1);
+    //console.log(counter);
+  };
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+    <div className="app">
+      <Navbar />
+      <Hero />
+      <Feature />
+      <Benefits />
+      <Testimonials />
+      {/* <CTA /> */}
+      <Footer />
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* <h1 class="khushi">Trackify</h1>
+      <h1>counter: {counter}</h1>
+      <button onClick={setCounter}>Increment</button>
+      <br/>
+      <button onClick={setDCounter}>Decrement</button> */}
+      
+    </div>
+
+
+  );
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+// export default function App() {
+//   const [timeLeft, setTimeLeft] = useState({});
+
+//   useEffect(() => {
+//     const targetDate = new Date();
+//     targetDate.setDate(targetDate.getDate() + 5);
+
+//     const interval = setInterval(() => {
+//       const now = new Date();
+//       const difference = targetDate - now;
+
+//       if (difference <= 0) {
+//         clearInterval(interval);
+//         return;
+//       }
+
+//       setTimeLeft({
+//         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+//         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+//         minutes: Math.floor((difference / 1000 / 60) % 60),
+//         seconds: Math.floor((difference / 1000) % 60),
+//       });
+//     }, 1000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   const card = {
+//     padding:"0",
+
+//     background: "rgba(20,20,30,0.85)",
+//     border: "1px solid rgba(255,255,255,0.08)",
+//     borderRadius: "18px",
+//     padding: "18px 22px",
+//     minWidth: "80px",
+//     textAlign: "center",
+//     boxShadow: "0 8px 30px rgba(52, 51, 51, 0.6)",
+//     backdropFilter: "blur(10px)",
+//   };
+
+//   return (
+//     <div
+//       style={{
+//         minHeight: "100vh",
+//         minWidth: "100vw",
+//         display: "flex",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         background: "#f0b216",
+//         color: "#e5e7eb",
+//         fontFamily: "Inter, system-ui, sans-serif",
+//         padding: "20px",
+//       }}
+//     >
+//       {/* Main container */}
+//       <div
+//         style={{
+//           width: "100%",
+//           maxWidth: "900px",
+//           padding: "50px 30px",
+//           borderRadius: "24px",
+//           background: "linear-gradient(145deg, #12121a, #1a1a26)",
+//           boxShadow: "0 20px 60px rgba(0,0,0,0.8)",
+//           textAlign: "center",
+//           position: "relative",
+//         }}
+//       >
+//         {/* subtle top glow */}
+//         <div
+//           style={{
+//             position: "absolute",
+//             top: 0,
+//             left: 0,
+//             right: 0,
+//             height: "2px",
+//             background: "linear-gradient(90deg,#7c3aed,#ec4899,#7c3aed)",
+//           }}
+//         />
+
+//         {/* Title */}
+//         <motion.h1
+//           initial={{ opacity: 0, y: -20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.8 }}
+//           style={{
+//             fontSize: "56px",
+//             fontWeight: 800,
+//             letterSpacing: "-1px",
+//             marginBottom: "25px",
+//             color: "#ffffff",
+//           }}
+//         >
+//           Trackify
+//         </motion.h1>
+
+//         {/* Tagline */}
+//         <motion.p
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           transition={{ delay: 0.3 }}
+//           style={{
+//             color: "#9ca3af",
+//             fontSize: "16px",
+//             marginBottom: "35px",
+//           }}
+//         >
+//           A cleaner way to build habits and stay consistent.
+//         </motion.p>
+
+//         {/* Countdown */}
+//         <motion.div
+//           initial={{ opacity: 0, scale: 0.9 }}
+//           animate={{ opacity: 1, scale: 1 }}
+//           transition={{ delay: 0.5 }}
+//           style={{
+//             display: "flex",
+//             justifyContent: "center",
+//             gap: "18px",
+//             marginBottom: "40px",
+//             flexWrap: "wrap",
+//           }}
+//         >
+//           {["days", "hours", "minutes", "seconds"].map((unit) => (
+//             <div key={unit} style={card}>
+//               <div
+//                 style={{
+//                   fontSize: "28px",
+//                   fontWeight: "700",
+//                   color: "#fff",
+//                 }}
+//               >
+//                 {timeLeft[unit] || "0"}
+//               </div>
+//               <div
+//                 style={{
+//                   fontSize: "11px",
+//                   color: "#6b7280",
+//                   marginTop: "4px",
+//                   textTransform: "uppercase",
+//                   letterSpacing: "1px",
+//                 }}
+//               >
+//                 {unit}
+//               </div>
+//             </div>
+//           ))}
+//         </motion.div>
+
+//         {/* Email input */}
+//         <motion.div
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           transition={{ delay: 0.7 }}
+//           style={{ display: "flex", justifyContent: "center" }}
+//         >
+//           <div
+//             style={{
+//               display: "flex",
+//               width: "100%",
+//               maxWidth: "420px",
+//               borderRadius: "50px",
+//               overflow: "hidden",
+//               border: "1px solid rgba(255,255,255,0.1)",
+//               background: "#111118",
+//             }}
+//           >
+//             <input
+//               type="email"
+//               placeholder="Enter your email"
+//               style={{
+//                 flex: 1,
+//                 padding: "14px 16px",
+//                 background: "transparent",
+//                 border: "none",
+//                 outline: "none",
+//                 color: "#fff",
+//                 fontSize: "14px",
+//               }}
+//             />
+//             <button
+//               style={{
+//                 padding: "0 20px",
+//                 border: "none",
+//                 cursor: "pointer",
+//                 background: "#7c3aed",
+//                 color: "white",
+//                 fontWeight: "600",
+//                 fontSize: "14px",
+//               }}
+//             >
+//               Notify
+//             </button>
+//           </div>
+//         </motion.div>
+
+//         {/* Footer */}
+//         <p
+//           style={{
+//             marginTop: "40px",
+//             fontSize: "12px",
+//             color: "#6b7280",
+//           }}
+//         >
+//           © {new Date().getFullYear()} Trackify
+//         </p>
+//       </div>
+//     </div>
+//   );
+// }
