@@ -724,36 +724,41 @@
 
 /* LEFT SIDE */
 .login-left {
-  flex: 1;
+  flex: 2;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
-  background: #ffffff;
+  padding: 10px;
+  background: white;
+  background-color: white;
 }
 
 /* Login Box */
 .login-box {
   width: 100%;
-  max-width: 380px;
+  max-width: 700px;
+  background-color:white;
 }
 
 .login-box h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   color: #111827;
+  background-color: white;
 }
 
 .subtitle {
   color: #6b7280;
   margin-bottom: 25px;
+  background-color: white;
 }
 
 /* Form */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 23px;
+  background-color: white;
 
 }
 
@@ -774,12 +779,14 @@
 .login-options {
   display: flex;
   justify-content: flex-end;
+  background-color: white;
 }
 
 .forgot {
   font-size: 0.85rem;
   color: #6366f1;
   cursor: pointer;
+  
 }
 
 /* Button */
@@ -801,15 +808,16 @@
 /* Divider */
 .divider {
   text-align: center;
-  margin: 25px 0;
+  margin: 35px 0;
   position: relative;
+  background-color: white;
 }
 
 .divider span {
   background: #ffffff;
   padding: 0 10px;
   color: #6b7280;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
 }
 
 .divider::before {
@@ -827,13 +835,14 @@
 .oauth-buttons {
   display: flex;
   gap: 10px;
+  background-color: white;
 }
 
 .oauth {
   flex: 1;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #040d1e;
   cursor: pointer;
   background: #ffffff;
   transition: all 0.2s ease;
@@ -843,11 +852,16 @@
   background: #f9fafb;
 }
 
+.register-text{
+  background-color: white;
+}
+
 /* RIGHT SIDE (IMAGE) */
 .login-right {
   flex: 1;
   overflow: hidden;
   padding: 80px 120px 80px 0px;
+  background-color:white;
 }
 
 .login-right img {
