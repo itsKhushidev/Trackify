@@ -15,6 +15,9 @@ const Navbar = () => {
       {/* Center - Menu */}
       <ul className="nav-center">
         <li>Home</li>
+        <Link to="/dashboard">
+        <li>Dashboard</li>
+        </Link>
         <li>Features</li>
         <li>About</li>
         <li>Contact</li>
