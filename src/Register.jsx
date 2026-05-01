@@ -49,7 +49,7 @@ function Register() {
       {/* RIGHT */}
       <div className="login-right">
         <img
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+          src="https://picsum.photos/500/500"
           alt="Register"
         />
       </div>

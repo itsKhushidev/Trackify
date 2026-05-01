@@ -57,7 +57,7 @@ function Login() {
       {/* RIGHT */}
       <div className="login-right">
         <img
-          src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d"
+          src="https://picsum.photos/500/500"
           alt="Productivity"
         />
       </div>
